@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://freecellmaringa.com.br/sitemap.xml
