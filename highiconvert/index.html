@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0b0f19">
+    <meta name="description" content="Landing pages rápidas, responsivas e pensadas para transformar visitas em contatos, orçamentos e oportunidades para o seu negócio.">
+    <title>HighConvert | Landing pages com estratégia</title>
+    <link rel="icon" href="data:,">
+    <link rel="preload" as="image" href="./assets/images/hero-workspace.jpg">
+    <link rel="stylesheet" href="./styles/tokens.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/simulator.css">
+    <link rel="stylesheet" href="./styles/commercial.css">
+    <link rel="stylesheet" href="./styles/quote.css">
+    <script type="module" src="./scripts/simulator.js"></script>
+    <script type="module" src="./scripts/quote.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="#conteudo" aria-label="HighConvert — início">HIGH<span>CONVERT</span></a>
+        <nav aria-label="Navegação principal">
+          <a class="nav-link" href="#proposta">A proposta
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-content">
+        <h1 id="hero-title"><span class="headline-line">Seu tráfego merece</span> <span class="headline-line">uma página feita</span> <span class="headline-line gradient-text">para converter.</span></h1>
+        <p class="hero-description">Landing pages rápidas, responsivas e pensadas para transformar visitas em contatos, orçamentos e oportunidades para o seu negócio.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#orcamento">Pedir meu orçamento
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+          </a>
+          <a class="simulation-link" href="#simulador">Simular cenários
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+        </div>
+      </section>
+      <section class="proposal container" id="proposta" aria-labelledby="proposal-title" tabindex="-1">
+        <div class="proposal-visual">
+          <h2 id="proposal-title">Uma página. Um objetivo.</h2>
+          <img class="proposal-illustration" src="./assets/images/landing-page-illustration.svg" width="330" height="260" loading="lazy" decoding="async" alt="Ilustração de uma landing page em computador e celular, com destaque para o botão de ação.">
+        </div>
+        <div>
+          <p>Uma landing page concentra a atenção no próximo passo: pedir um orçamento, agendar uma conversa ou iniciar uma compra. A mensagem da campanha, o conteúdo e a experiência da página precisam trabalhar na mesma direção.</p>
+          <nav class="project-links" aria-label="Explore o projeto">
+            <a href="#entregaveis">Entregáveis</a>
+            <a href="#processo">Processo</a>
+            <a href="#investimento">Investimento</a>
+            <a href="#duvidas">Dúvidas</a>
+            <a href="#orcamento">Orçamento</a>
+          </nav>
+        </div>
+      </section>
+      <section class="simulator container" id="simulador" aria-labelledby="simulator-title" tabindex="-1">
+        <div class="simulator-heading">
+          <h2 id="simulator-title">Simule o próximo passo.</h2>
+          <p>Veja como diferentes taxas de conversão mudam a quantidade de ações geradas pela sua página.</p>
+        </div>
+        <noscript><p class="simulator-warning">Ative o JavaScript para usar o simulador. O cálculo é: visitas × taxa de conversão ÷ 100.</p></noscript>
+        <div class="simulator-layout">
+          <form id="simulation-form" novalidate aria-label="Cenários de conversão">
+            <div class="simulation-field">
+              <label for="simulation-goal">Objetivo da página</label>
+              <select id="simulation-goal" aria-describedby="goal-error">
+                <option value="contacts">Contatos</option>
+                <option value="quotes">Pedidos de orçamento</option>
+                <option value="bookings">Agendamentos</option>
+                <option value="sales">Vendas</option>
+              </select>
+              <p class="field-error" id="goal-error" hidden></p>
+            </div>
+            <div class="simulation-field">
+              <label for="simulation-visits">Visitas por mês</label>
+              <input id="simulation-visits" type="number" inputmode="numeric" min="0" max="1000000" step="1" value="3000" required aria-describedby="visits-error">
+              <p class="field-error" id="visits-error" hidden></p>
+            </div>
+            <div class="simulation-rate-fields">
+              <div class="simulation-field">
+                <label for="simulation-current">Conversão atual (%)</label>
+                <input id="simulation-current" type="number" inputmode="decimal" min="0" max="100" step="0.01" value="1" required aria-describedby="current-error">
+                <p class="field-error" id="current-error" hidden></p>
+              </div>
+              <div class="simulation-field">
+                <label for="simulation-scenario">Cenário simulado (%)</label>
+                <input id="simulation-scenario" type="number" inputmode="decimal" min="0" max="100" step="0.01" value="2" required aria-describedby="scenario-error">
+                <p class="field-error" id="scenario-error" hidden></p>
+              </div>
+            </div>
+            <p class="simulation-hint">Use números do seu negócio. As taxas são hipóteses.</p>
+            <button class="reset-simulation" type="reset" id="simulation-reset" disabled>Restaurar exemplo</button>
+          </form>
+          <div class="simulation-panel">
+            <h3>Seu cenário, em números.</h3>
+            <p id="simulation-error" class="simulator-warning" role="alert" hidden>Confira os campos indicados para visualizar o cenário.</p>
+            <div id="simulation-results" aria-live="polite" aria-atomic="true" hidden>
+              <div class="simulation-stats">
+                <div>
+                  <p class="stat-label">Hoje</p>
+                  <output class="stat-value" id="current-result"></output>
+                  <p class="stat-unit" data-result-unit></p>
+                </div>
+                <div>
+                  <p class="stat-label">No cenário</p>
+                  <output class="stat-value scenario-value" id="scenario-result"></output>
+                  <p class="stat-unit" data-result-unit></p>
+                </div>
+              </div>
+              <div class="simulation-comparison">
+                <p id="simulation-difference" class="simulation-difference"></p>
+                <p id="simulation-context" class="simulation-context"></p>
+              </div>
+            </div>
+            <p class="simulation-example">Valores iniciais são apenas um exemplo.</p>
+          </div>
+        </div>
+        <div class="simulation-disclaimer">
+          <p>Simulação ilustrativa, não uma previsão. Resultados dependem de tráfego, oferta, mercado e execução.</p>
+          <p>Uma conversão é a ação selecionada. As quantidades são estimadas e podem aparecer fracionadas.</p>
+        </div>
+      </section>
+      <section class="commercial-section container" id="entregaveis" aria-labelledby="deliverables-title" tabindex="-1">
+        <div class="commercial-intro">
+          <h2 class="commercial-title" id="deliverables-title">Uma página pensada para o seu objetivo.</h2>
+          <p>O ponto de partida é o que você quer que o visitante faça. Os itens e integrações são definidos para esse objetivo e descritos na proposta.</p>
+        </div>
+        <ol class="deliverable-list" role="list">
+          <li>
+            <span class="deliverable-number" aria-hidden="true">01</span>
+            <h3>Estrutura e conteúdo</h3>
+            <p>Hierarquia das informações e caminho até a ação principal. Textos e imagens são alinhados no escopo.</p>
+          </li>
+          <li>
+            <span class="deliverable-number" aria-hidden="true">02</span>
+            <h3>Design responsivo</h3>
+            <p>Organização visual para celular e computador, com foco em leitura e navegação.</p>
+          </li>
+          <li>
+            <span class="deliverable-number" aria-hidden="true">03</span>
+            <h3>Implementação e revisão</h3>
+            <p>Construção da página e conferência dos links, campos e elementos previstos no projeto.</p>
+          </li>
+          <li>
+            <span class="deliverable-number" aria-hidden="true">04</span>
+            <h3>Integrações definidas no escopo</h3>
+            <p>Formulário, WhatsApp e ferramentas de medição são avaliados conforme a necessidade do projeto.</p>
+          </li>
+        </ol>
+      </section>
+      <section class="commercial-section container process-section" id="processo" aria-labelledby="process-title" tabindex="-1">
+        <h2 class="process-title" id="process-title"><span>Do briefing à</span> <span>página no ar.</span></h2>
+        <p class="process-description">Você acompanha as decisões ao longo do projeto.</p>
+        <ol class="process-timeline" role="list">
+          <li>
+            <span class="process-number" aria-hidden="true">01</span>
+            <div><h3>Entender</h3><p>Alinhamos público, oferta e objetivo da página.</p></div>
+          </li>
+          <li>
+            <span class="process-number" aria-hidden="true">02</span>
+            <div><h3>Definir</h3><p>Organizamos a estrutura e os itens da proposta.</p></div>
+          </li>
+          <li>
+            <span class="process-number" aria-hidden="true">03</span>
+            <div><h3>Construir</h3><p>A página é construída a partir do escopo alinhado.</p></div>
+          </li>
+          <li>
+            <span class="process-number" aria-hidden="true">04</span>
+            <div><h3>Revisar e publicar</h3><p>Conferimos o projeto e alinhamos a publicação.</p></div>
+          </li>
+        </ol>
+      </section>
+      <section class="commercial-section container investment-section" id="investimento" aria-labelledby="investment-title" tabindex="-1">
+        <div class="investment-intro">
+          <h2 id="investment-title"><span>Um escopo claro.</span> <span>Um investimento</span> <span class="gradient-text">alinhado.</span></h2>
+          <p>O modelo econômico atende a projetos de estrutura simples. Se a sua página precisar de mais recursos ou personalização, o investimento é definido em um orçamento específico.</p>
+          <figure class="page-example">
+            <figcaption class="page-example-heading">
+              <span class="page-example-label">Exemplo de landing page</span>
+              <span class="page-example-name">Free Cell</span>
+            </figcaption>
+            <p class="page-example-hint" id="page-example-hint">Role dentro da prévia para ver a página completa.</p>
+            <div class="page-example-scroll" tabindex="0" role="region" aria-label="Prévia rolável da página Free Cell" aria-describedby="page-example-hint">
+              <img src="./assets/examples/freecell-full-page.jpg" width="1425" height="9047" loading="lazy" decoding="async" alt="Captura completa do site Free Cell: abertura, serviços, processo de atendimento, galeria, informações da loja, localização, perguntas frequentes e rodapé.">
+            </div>
+            <div class="page-example-footer">
+              <p>Referência visual. O modelo econômico inclui até 5 seções.</p>
+              <a href="https://www.freecellmaringa.com.br/" target="_blank" rel="noopener noreferrer">Abrir site original <span aria-hidden="true">↗</span></a>
+            </div>
+          </figure>
+        </div>
+        <div class="investment-panel">
+          <h3>Modelo econômico</h3>
+          <p class="economic-price">R$ 600,00</p>
+          <p class="economic-description">Para uma página com estrutura simples e escopo alinhado na proposta.</p>
+          <dl class="investment-terms">
+            <div><dt>Itens do modelo</dt><dd>Página personalizada nas cores da empresa, com até 5 seções. Exemplos: banner de topo, serviços, quem somos e contato/localização.</dd></div>
+            <div><dt>Prazo e revisões</dt><dd>Entrega em 48 horas após o recebimento da logo e das informações do projeto enviadas pelo cliente. Inclui 3 revisões para alterações no projeto.</dd></div>
+            <div><dt>Hospedagem</dt><dd>6 meses de hospedagem grátis. Após esse período, o valor será R$ 29,90 por mês.</dd></div>
+          </dl>
+          <a class="button button-primary investment-button" href="#orcamento" data-budget-choice="economic">Quero o modelo econômico
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+          </a>
+          <div class="custom-project">
+            <h4>Projeto personalizado</h4>
+            <p>Mais recursos, maior complexidade, criação de logo e outras personalizações recebem orçamento específico.</p>
+            <a class="custom-budget-link" href="#orcamento" data-budget-choice="custom">Solicitar orçamento personalizado
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+          <a class="investment-conditions" href="#duvidas">Entenda as condições</a>
+        </div>
+      </section>
+      <section class="commercial-section container faq-section" id="duvidas" aria-labelledby="faq-title" tabindex="-1">
+        <div class="commercial-intro faq-intro">
+          <h2 class="commercial-title" id="faq-title"><span>Antes de começar,</span> <span class="faq-accent">tire suas dúvidas.</span></h2>
+          <p>Condições claras para você decidir com tranquilidade.</p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary><h3>Quanto custa uma landing page?</h3><svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12h10"/><path class="faq-plus" d="M12 7v10"/></svg></summary>
+            <p>O modelo econômico custa R$ 600,00. Projetos com mais recursos, maior complexidade, criação de logo ou outras personalizações recebem orçamento específico. Os itens e as condições de cada projeto são alinhados na proposta.</p>
+          </details>
+          <details>
+            <summary><h3>Qual é o prazo de entrega?</h3><svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12h10"/><path class="faq-plus" d="M12 7v10"/></svg></summary>
+            <p>No modelo econômico, a página é entregue em 48 horas após o recebimento da logo e das informações do projeto enviadas pelo cliente. Para projetos personalizados, o prazo é combinado na proposta.</p>
+          </details>
+          <details>
+            <summary><h3>Quem fornece textos e imagens?</h3><svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12h10"/><path class="faq-plus" d="M12 7v10"/></svg></summary>
+            <p>A responsabilidade pelos textos e imagens é alinhada no briefing e registrada na proposta.</p>
+          </details>
+          <details>
+            <summary><h3>Quantas revisões estão incluídas?</h3><svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12h10"/><path class="faq-plus" d="M12 7v10"/></svg></summary>
+            <p>O modelo econômico inclui 3 revisões para alterações no projeto. Para projetos personalizados, a quantidade de revisões e os limites de alteração são definidos na proposta. Mudanças de escopo são avaliadas à parte.</p>
+          </details>
+          <details>
+            <summary><h3>Domínio e hospedagem estão incluídos?</h3><svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12h10"/><path class="faq-plus" d="M12 7v10"/></svg></summary>
+            <p>O modelo econômico inclui 6 meses de hospedagem grátis. Após esse período, o valor será R$ 29,90 por mês. As condições de domínio são alinhadas na proposta. Para projetos personalizados, a hospedagem é definida conforme o escopo.</p>
+          </details>
+          <details>
+            <summary><h3>Posso solicitar alterações depois?</h3><svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12h10"/><path class="faq-plus" d="M12 7v10"/></svg></summary>
+            <p>O acesso, a manutenção e o suporte após a entrega são alinhados na proposta. Novas demandas podem ser orçadas separadamente.</p>
+          </details>
+          <details>
+            <summary><h3>Vocês garantem mais vendas?</h3><svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12h10"/><path class="faq-plus" d="M12 7v10"/></svg></summary>
+            <p>Não garantimos um número exato de vendas ou uma taxa específica de conversão. Porém, podemos comprovar que 100% dos clientes que atendemos tiveram um aumento substancial nas buscas por seus serviços e produtos.</p>
+            <p>O resultado depende também da oferta, do tráfego e do mercado.</p>
+            <p>Para obter um melhor desempenho, também oferecemos serviços de tráfego pago e Google Ads.</p>
+            <p><a class="custom-budget-link" href="#orcamento">Solicite um atendimento dos nossos consultores <span aria-hidden="true">→</span></a></p>
+          </details>
+        </div>
+      </section>
+      <section class="quote-section container" id="orcamento" aria-labelledby="quote-title" tabindex="-1">
+        <div class="quote-heading">
+          <h2 id="quote-title"><span>Vamos falar sobre</span> <span>a sua página.</span></h2>
+          <p>Conte o essencial. Depois, revise a mensagem e continue pelo WhatsApp.</p>
+        </div>
+        <noscript><p class="quote-noscript">Para continuar sem o formulário, <a href="https://wa.me/5544997249334" target="_blank" rel="noopener noreferrer">fale diretamente pelo WhatsApp</a>.</p></noscript>
+        <div class="quote-layout">
+          <form id="quote-form" novalidate aria-label="Pedido de orçamento">
+            <p class="quote-error-summary" id="quote-error-summary" role="alert" hidden>Confira os campos indicados antes de revisar a mensagem.</p>
+            <div class="quote-field-grid">
+              <div class="quote-field">
+                <label for="quote-name">Seu nome</label>
+                <input id="quote-name" type="text" required maxlength="80" autocomplete="name" placeholder="Seu nome" aria-describedby="quote-name-error">
+                <p class="quote-field-error" id="quote-name-error" hidden></p>
+              </div>
+              <div class="quote-field">
+                <label for="quote-segment">Segmento do negócio</label>
+                <input id="quote-segment" type="text" required maxlength="120" placeholder="Ex.: clínica, loja, consultoria" aria-describedby="quote-segment-error">
+                <p class="quote-field-error" id="quote-segment-error" hidden></p>
+              </div>
+              <div class="quote-field">
+                <label for="quote-goal">Objetivo da página</label>
+                <select id="quote-goal" required aria-describedby="quote-goal-error">
+                  <option value="">Selecione um objetivo</option>
+                  <option value="contacts">Contatos</option>
+                  <option value="quotes">Pedidos de orçamento</option>
+                  <option value="bookings">Agendamentos</option>
+                  <option value="sales">Vendas</option>
+                </select>
+                <p class="quote-field-error" id="quote-goal-error" hidden></p>
+              </div>
+              <div class="quote-field">
+                <label for="quote-interest">O que você procura?</label>
+                <select id="quote-interest" aria-describedby="quote-interest-error">
+                  <option value="guidance">Quero uma orientação</option>
+                  <option value="economic">Econômico — R$ 600,00</option>
+                  <option value="custom">Personalizado — sob orçamento</option>
+                </select>
+                <p class="quote-field-error" id="quote-interest-error" hidden></p>
+              </div>
+              <div class="quote-field quote-field-wide">
+                <label for="quote-website">Site atual (opcional)</label>
+                <input id="quote-website" type="text" inputmode="url" maxlength="2048" autocomplete="url" placeholder="https://seusite.com.br" aria-describedby="quote-website-error">
+                <p class="quote-field-error" id="quote-website-error" hidden></p>
+              </div>
+              <div class="quote-field quote-field-wide">
+                <label for="quote-notes">Detalhes do projeto (opcional)</label>
+                <textarea id="quote-notes" rows="3" maxlength="800" placeholder="Conte o que você precisa." aria-describedby="quote-notes-error"></textarea>
+                <p class="quote-field-error" id="quote-notes-error" hidden></p>
+              </div>
+            </div>
+            <div class="quote-actions">
+              <button class="button button-primary quote-submit" id="quote-submit" type="submit" disabled>Revisar mensagem</button>
+              <button class="quote-reset" type="reset">Limpar formulário</button>
+            </div>
+            <p class="quote-hint">As respostas preparam sua mensagem. Você revisa antes de continuar.</p>
+          </form>
+          <aside class="quote-panel" aria-labelledby="quote-panel-title">
+            <h3 id="quote-panel-title">Da sua ideia à conversa.</h3>
+            <div id="quote-guide">
+              <ol class="quote-guide-list" role="list">
+                <li><span aria-hidden="true">1</span><div><h4>Conte o essencial.</h4><p>Preencha as informações principais sobre seu projeto.</p></div></li>
+                <li><span aria-hidden="true">2</span><div><h4>Revise sua mensagem.</h4><p>Suas respostas serão organizadas em uma mensagem para revisão.</p></div></li>
+                <li><span aria-hidden="true">3</span><div><h4>Continue no WhatsApp.</h4><p>Depois da revisão, abra o WhatsApp para conversar.</p></div></li>
+              </ol>
+              <div class="quote-contact">
+                <p>Atendimento pelo WhatsApp</p>
+                <strong data-contact-number>+55 (44) 99724-9334</strong>
+                <p>Você envia pelo próprio WhatsApp.</p>
+              </div>
+            </div>
+            <div id="quote-review" tabindex="-1" aria-labelledby="quote-panel-title" hidden>
+              <p class="quote-review-note">A mensagem ainda não foi enviada.</p>
+              <label class="quote-draft-label" for="quote-draft">Mensagem para revisar</label>
+              <textarea id="quote-draft" class="quote-draft" readonly rows="10" spellcheck="false"></textarea>
+              <p class="quote-destination">Destino: <strong data-contact-number>+55 (44) 99724-9334</strong></p>
+              <a class="button button-primary quote-continue" id="quote-continue" target="_blank" rel="noopener noreferrer">Continuar no WhatsApp
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+              </a>
+              <p class="quote-hint">Você revisa e envia a mensagem no WhatsApp.</p>
+            </div>
+            <p id="quote-status" class="quote-status" role="status"></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer container">
+      <span>HighConvert</span>
+      <a class="footer-whatsapp" href="https://wa.me/5544997249334" target="_blank" rel="noopener noreferrer">WhatsApp: (44) 99724-9334</a>
+      <span>Landing pages com estratégia.</span>
+    </footer>
+  </body>
+</html>

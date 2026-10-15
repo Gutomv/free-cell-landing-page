@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="330" height="260" viewBox="0 0 330 260" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustração vetorial de landing page orientada à conversão</title>
+  <desc id="desc">Janela de navegador com uma landing page, botão de ação, uma versão responsiva para celular e um indicador visual de conversão.</desc>
+  <defs>
+    <linearGradient id="frame" x1="20" y1="50" x2="285" y2="215" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#213451"/>
+      <stop offset="1" stop-color="#123044"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="35" y1="95" x2="265" y2="216" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111A2C"/>
+      <stop offset="1" stop-color="#101628"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="50" y1="0" x2="175" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9A32FF"/>
+      <stop offset=".5" stop-color="#3878FF"/>
+      <stop offset="1" stop-color="#00D7ED"/>
+    </linearGradient>
+    <linearGradient id="cta" x1="47" y1="174" x2="145" y2="177" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8D2BFA"/>
+      <stop offset="1" stop-color="#00CFEA"/>
+    </linearGradient>
+    <linearGradient id="mobile" x1="235" y1="112" x2="303" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#182944"/>
+      <stop offset="1" stop-color="#0F1B2A"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(168 137) rotate(90) scale(128 161)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F7BC7" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#1F7BC7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-25%" y="-35%" width="160%" height="185%">
+      <feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#000000" flood-opacity=".36"/>
+    </filter>
+  </defs>
+
+  <!-- soft atmospheric glow; completely transparent at the bounds -->
+  <ellipse cx="166" cy="140" rx="162" ry="126" fill="url(#halo)"/>
+  <path d="M18 220H317" stroke="#294058" stroke-width=".8" opacity=".35" stroke-dasharray="3 7"/>
+  <circle cx="18" cy="220" r="2" fill="#2D9BCF" opacity=".7"/>
+  <circle cx="317" cy="220" r="2" fill="#7F39EF" opacity=".7"/>
+
+  <!-- back offset browser outline creates depth without adding noise -->
+  <rect x="33" y="37" width="245" height="173" rx="13" fill="#152139" stroke="#375274" stroke-opacity=".45"/>
+  <path d="M43 37H268" stroke="url(#accent)" stroke-width="2" opacity=".65" stroke-linecap="round"/>
+
+  <!-- primary browser window -->
+  <g filter="url(#shadow)">
+    <rect x="19" y="49" width="251" height="170" rx="12" fill="url(#screen)" stroke="#3B5678" stroke-width="1.4"/>
+    <path d="M19 61C19 54.373 24.373 49 31 49H258C264.627 49 270 54.373 270 61V80H19V61Z" fill="url(#frame)"/>
+    <path d="M19 80H270" stroke="#486483" stroke-opacity=".65"/>
+    <circle cx="35" cy="65" r="3" fill="#A13AFF"/>
+    <circle cx="46" cy="65" r="3" fill="#477AFF"/>
+    <circle cx="57" cy="65" r="3" fill="#02C9E4"/>
+    <rect x="85" y="59" width="100" height="13" rx="6.5" fill="#101C2E" stroke="#55708E" stroke-opacity=".4"/>
+    <path d="M98 65.5H150" stroke="#8DA3BC" stroke-width="2" opacity=".32" stroke-linecap="round"/>
+    <path d="M247 62L252 67L257 62" stroke="#6F8BA7" stroke-width="1.2" opacity=".8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- tiny visual navigation -->
+  <rect x="34" y="90" width="39" height="4" rx="2" fill="#16C7E9" opacity=".9"/>
+  <rect x="191" y="90" width="24" height="3" rx="1.5" fill="#63819F" opacity=".55"/>
+  <rect x="222" y="90" width="17" height="3" rx="1.5" fill="#63819F" opacity=".38"/>
+
+  <!-- landing page content: headline, supporting copy, CTA -->
+  <rect x="35" y="112" width="112" height="10" rx="5" fill="#F7FAFF" opacity=".93"/>
+  <rect x="35" y="127" width="91" height="10" rx="5" fill="url(#accent)"/>
+  <rect x="35" y="145" width="117" height="3" rx="1.5" fill="#8495B3" opacity=".6"/>
+  <rect x="35" y="152" width="103" height="3" rx="1.5" fill="#8495B3" opacity=".45"/>
+  <rect x="35" y="159" width="76" height="3" rx="1.5" fill="#8495B3" opacity=".32"/>
+  <rect x="35" y="175" width="100" height="28" rx="8" fill="url(#cta)"/>
+  <rect x="48" y="186" width="48" height="4" rx="2" fill="white" opacity=".95"/>
+  <path d="M114 189H123M119 185L123 189L119 193" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- miniature visual website artwork inside browser -->
+  <rect x="162" y="106" width="93" height="96" rx="8" fill="#15283F" stroke="#375275" stroke-opacity=".6"/>
+  <path d="M173 174L192 157L208 165L226 138L244 147" stroke="url(#accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M173 174L192 157L208 165L226 138L244 147V187H173V174Z" fill="url(#accent)" opacity=".14"/>
+  <rect x="173" y="117" width="24" height="4" rx="2" fill="#D8E5FB" opacity=".72"/>
+  <rect x="173" y="125" width="42" height="3" rx="1.5" fill="#8EA7C7" opacity=".38"/>
+  <circle cx="226" cy="138" r="4" fill="#08DAE9"/>
+  <circle cx="226" cy="138" r="8" stroke="#00D7ED" stroke-opacity=".37"/>
+  <rect x="174" y="190" width="69" height="3" rx="1.5" fill="#7896B5" opacity=".35"/>
+
+  <!-- click pointer reinforces a single call-to-action -->
+  <circle cx="131" cy="182" r="18" stroke="#00D8EC" stroke-width="1.2" stroke-opacity=".6" stroke-dasharray="3 5"/>
+  <path d="M131 181L139 207L146 197L158 199L131 181Z" fill="#F7FAFF" stroke="#10182A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M144.7 197.7L151.6 210" stroke="#F7FAFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M144.7 197.7L151.6 210" stroke="#15243A" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!-- success/goal indicator -->
+  <g filter="url(#shadow)">
+    <rect x="231" y="16" width="80" height="65" rx="13" fill="#14263D" stroke="#33748E" stroke-opacity=".9"/>
+    <circle cx="253" cy="39" r="12" fill="#02D4E9" fill-opacity=".15" stroke="#06D9EA" stroke-width="1.5"/>
+    <path d="M247 39L251.5 43.5L260 34.5" stroke="#28EDEB" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="273" y="30" width="26" height="4" rx="2" fill="#ECF8FF" opacity=".72"/>
+    <rect x="273" y="40" width="20" height="3" rx="1.5" fill="#859CB9" opacity=".55"/>
+    <rect x="242" y="61" width="56" height="4" rx="2" fill="url(#accent)" opacity=".8"/>
+  </g>
+
+  <!-- mobile responsive preview, clearly smaller than desktop design -->
+  <g filter="url(#shadow)">
+    <rect x="239" y="110" width="71" height="128" rx="13" fill="url(#mobile)" stroke="#487398" stroke-width="1.5"/>
+    <rect x="245" y="123" width="59" height="103" rx="7" fill="#101829"/>
+    <rect x="261" y="116" width="27" height="3" rx="1.5" fill="#819AB5" opacity=".75"/>
+    <rect x="252" y="131" width="18" height="3.5" rx="1.75" fill="#09D3EE"/>
+    <rect x="252" y="146" width="42" height="5" rx="2.5" fill="#F7FAFF" opacity=".9"/>
+    <rect x="252" y="155" width="33" height="5" rx="2.5" fill="url(#accent)"/>
+    <rect x="252" y="165" width="42" height="2.5" rx="1.25" fill="#9DB4CA" opacity=".4"/>
+    <rect x="252" y="172" width="37" height="2.5" rx="1.25" fill="#9DB4CA" opacity=".32"/>
+    <rect x="252" y="183" width="45" height="25" rx="5" fill="#192F49"/>
+    <path d="M259 201L268 192L275 197L283 190L290 194" stroke="#00D5EF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="252" y="212" width="45" height="9" rx="4.5" fill="url(#cta)"/>
+  </g>
+
+  <!-- small supporting traces -->
+  <path d="M51 234H117" stroke="#3291C0" stroke-opacity=".6" stroke-width="1.3" stroke-linecap="round"/>
+  <circle cx="49" cy="234" r="3" fill="#8E31F7"/>
+  <circle cx="122" cy="234" r="3" fill="#03D3E5"/>
+  <path d="M139 234H196" stroke="#3291C0" stroke-opacity=".28" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 5"/>
+</svg>
